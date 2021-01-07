@@ -114,27 +114,6 @@ export default function Home() {
       </Box>
      
      <BoxServicesContainer />
-     
-     <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
-      <SimpleGrid  justifyContent="center" textAlign="center" >
-      <Box h="100%" >
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
-        transition={{ delay: 1.5, duration: 1.9 }}
-        
-      >
-      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >CONTACTS</Text>
-      </motion.div>
-      </Box>
-      <Text size="1xl"  position="relative" justifyContent="center"   top="-34px">Some ways for you to contact us</Text>
-
-      <Link href="/services">
-      <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
-      </Link>
-
-      </SimpleGrid>
-      </Box>
 
 
 

@@ -1,11 +1,9 @@
 import { theme, DefaultTheme,  } from '@chakra-ui/core';
 
-const breakpoints = ["360px", "768px", "1024px", "1440px"];
-
 
 const customTheme: DefaultTheme = {
  ...theme,
- breakpoints,
+
  
  fonts: {
    body: 'inter, system-ui, sans-serif',
