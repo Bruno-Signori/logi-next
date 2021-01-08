@@ -31,7 +31,7 @@ export const MenuMobile = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <motion.nav className="md:hidden absolute top-0 right-0 botton-0 w-24 border-none backgroundcolor-red	"
+    <motion.nav className="md:hidden absolute top-0 right-6 botton-0 w-12 "
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}

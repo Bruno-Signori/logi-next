@@ -6,15 +6,15 @@ const Path = props => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
+    stroke="#19B5FE"
     strokeLinecap="round"
     {...props}
   />
 );
 
 export const MenuToggle = ({ toggle }) => (
-  <Button variant="ghost" color="blue.300"  borderColor="blue.300" border="none" className="absolute cursor-pointer top-4 right-0 w-16 h-12 rounded-full" onClick={toggle}>
-    <svg width="25" height="25"  viewBox="0 0 23 23">
+  <Button   className="absolute cursor-pointer top-4 right-0 w-29 h-18 rounded-full" onClick={toggle}>
+    <svg width="25" height="25"   viewBox="0 0 23 23">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },

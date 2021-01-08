@@ -13,7 +13,7 @@ const MyHeader: React.FC = () => {
     animate={{ opacity: 1 }}
     transition={{ duration: 1.1 }}
     >
-    <div className=" max-w-screen-3xl	space py-3  sm:px-6 md:flex px-8 justify-between items-center"  >
+    <div className="sm:px-7 max-w-screen-3xl	space py-3  md:flex px-8 justify-between items-center"  >
      <div className="sm:py-2 " >
      <Image width={190} height={40} src="/rocketseat.svg" alt='rock' />
      </div>

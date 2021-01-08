@@ -60,7 +60,6 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1.9 }}
-            drag={true}
             >
             
       <Image  position="relative"  zIndex={9999}  src="/logitech.png" alt='rock' />
