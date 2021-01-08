@@ -1,6 +1,5 @@
 import React from  'react';
-
-import {Box, Link, Image, Button, Flex} from '@chakra-ui/core';
+import Image from  'next/image';
 import {motion} from "framer-motion";
 import {MenuMobile} from '../MenuMobile'
 
@@ -14,20 +13,37 @@ const MyHeader: React.FC = () => {
     animate={{ opacity: 1 }}
     transition={{ duration: 1.1 }}
     >
-    <Flex className="max-w-screen-3xl	space mx-auto px-4 sm:px-6 md:px-8 justify-between items-center"  >
-     <Box className="flex py-6 md:py-4 " >
-     <Image src="/rocketseat.svg" alt='rock' />
-     </Box>
+    <div className=" max-w-screen-3xl	space py-3  sm:px-6 md:flex px-8 justify-between items-center"  >
+     <div className="sm:py-2 " >
+     <Image width={190} height={40} src="/rocketseat.svg" alt='rock' />
+     </div>
   
      
-     <motion.div 
-     initial={{ opacity: 1 }}
-     animate={{ opacity: 0.9 }}
-     transition={{ duration: 2.2 }}
-     >
     
-    <Box className="hidden md:block flex py-6 md:py-4">
-                <Link 
+    <div className="hidden md:block items-center justify-items-end ">
+    <div className=" text-1xl space-x-6 tracking-wider"> 
+            <a href="/" className="text-white px-3 py-2 focus:border-b-2 border-blue-light  hover:text-blue-light   ">Home</a>
+            <a href="/products/allproducts" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500  rounded-md ">Products</a>
+            <a href="/services" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Services</a>
+            <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Members</a>
+            <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Contact</a>
+            <button className="border-solid border-2 border-blue-light px-3 py-2 rounded-md focus:bg-gray-light hover:bg-gray-lightest"  >Sign in </button>
+
+          </div>
+
+    
+      
+      </div>
+      <MenuMobile/>
+      </div>
+  </motion.div>
+    
+   
+  );
+}
+export default MyHeader;
+
+/**      <Link 
                   href="/" 
                   textDecor="none"
                   paddingBottom={4}
@@ -71,16 +87,4 @@ const MyHeader: React.FC = () => {
                 _hover={{color: 'blue.400'}}
                 _focus={{border: "none" , color:"gray.900"}}
                   marginRight={10}>Contact</Link>
-
-       <Button  variant="ghost"  borderColor="blue.300" border="1px solid #19B5FE">Sign in </Button>
-      
-      </Box>
-      </motion.div>
-      <MenuMobile/>
-      </Flex>
-  </motion.div>
-    
-   
-  );
-}
-export default MyHeader;
+ */

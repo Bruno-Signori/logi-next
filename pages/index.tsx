@@ -1,6 +1,6 @@
 
-import {Box, Button, Flex, Grid, Heading, Input, Link, Text, Icon, Image, SimpleGrid} from '@chakra-ui/core'
-import { motion, useCycle } from 'framer-motion'
+import {Box, Button, Flex, Grid, Heading, Input, Link, Text, Icon, Image, SimpleGrid} from '@chakra-ui/core';
+import { motion } from 'framer-motion';
 
 import BoxMediaContacts from '../components/BoxMedia';
 import BoxServicesContainer from '../components/BoxServicesContainer';
