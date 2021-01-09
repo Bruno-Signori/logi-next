@@ -26,7 +26,7 @@ export default function Home({recommendedProducts}: HomeProps) {
   
   if (router.isFallback) {
     return (
-      <div style={{display:"flex" , marginTop: "30px", justifyContent: 'center', justifyItems: "center", width:"100%", height:"100%"}}>
+      <div className="flex mt-7 justify-items-center justify-center w-full h-full" >
         
         <Spinner 
             thickness="5px"

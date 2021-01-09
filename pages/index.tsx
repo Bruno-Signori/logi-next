@@ -6,6 +6,7 @@ import BoxMediaContacts from '../components/BoxMedia';
 import BoxServicesContainer from '../components/BoxServicesContainer';
 import SEO from '../components/SEO';
 import BoxMouse from '../components/BoxMouse';
+import { BoxMenbers } from '../components/BoxMenbers';
 
 
 
@@ -73,7 +74,7 @@ export default function Home() {
       <Box h="100%" >
       <motion.div 
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
+        animate={{ opacity: 0.3 }}
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
@@ -96,7 +97,7 @@ export default function Home() {
       <Box h="100%" >
       <motion.div 
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
+        animate={{ opacity: 0.3 }}
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
@@ -114,6 +115,29 @@ export default function Home() {
      
      <BoxServicesContainer />
 
+      
+     <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
+      <SimpleGrid  justifyContent="center" textAlign="center" >
+      <Box h="100%" >
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.3 }}
+        transition={{ delay: 1.5, duration: 1.9 }}
+        
+      >
+      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >Members</Text>
+      </motion.div>
+      </Box>
+      <Text size="1xl"  position="relative" justifyContent="center"  top="-34px">We Proudly introduce our powerfull members</Text>
+
+      <Link href="/services">
+      <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
+      </Link>
+
+      </SimpleGrid>
+      </Box>
+      <BoxMenbers/>
+
 
 
       <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
@@ -121,7 +145,7 @@ export default function Home() {
       <Box h="100%" >
       <motion.div 
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.2 }}
+        animate={{ opacity: 0.3 }}
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >

@@ -1,9 +1,10 @@
 import React from 'react'
 import { GetStaticProps, NextPageContext } from 'next'
 import { Flex, Image, Link } from '@chakra-ui/core'
-import DividerCustom from '../../components/Divider'
-import MyHeader from '../../components/Header'
+
 import SEO from '../../components/SEO'
+import { MenbersMobile } from '../../components/BoxMenbersMobile'
+
 
 interface Props {
   stars?: string;
@@ -32,6 +33,8 @@ export default function git({ user }) {
   <Flex>Next stars: {user.full_name},{user.forks},  {user.full_name} ,{user.stargazers_count}, {user.description}, {user.owner.login} 
  
   </Flex>
+
+  <MenbersMobile/>
   </div>
 
   )}

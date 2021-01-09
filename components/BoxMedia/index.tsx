@@ -9,9 +9,9 @@ import DividerCustom from '../Divider';
 const BoxMediaContacts: React.FC = () => {
   return (
    
-    <Box height="350px" width="1200px" justifyContent="center" textAlign="center" justifyItems="center" flex="1" >
-    <SimpleGrid justifyContent="center" columns={2} spacing={30}>
-      <Box  height="350px" textAlign="left"  flex="1" justifyContent="space-between"
+    <Box height="350px" width="1200px" textAlign="center" justifyItems="center" justifyContent="space-between"  >
+    <SimpleGrid justifyContent="center" columns={2}>
+      <Box  height="350px" textAlign="left" 
         
       >
         <Box >
