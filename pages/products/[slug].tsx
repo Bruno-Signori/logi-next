@@ -148,7 +148,6 @@ export default function Home({recommendedProducts}: HomeProps) {
                 
                )
              })}
-               <MenbersMobile/>
 
             
            </Flex>
