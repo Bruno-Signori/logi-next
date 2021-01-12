@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 import * as React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,9 +28,13 @@ const variants = {
 const images = [
   "/electros.png",
   "/predator.png",
-  "/electros.png",
-  "/electros.png",
+  "/terabyte.png",
+  "/spaceplay.png",
 ];
+
+const PropsDivImage = ['block justify-items-center justify-center h-52 bg-gray-light rounded-xl'];
+const PropsDivText = ['flex justify-items-center justify-center '];
+
 
 
 const swipeConfidenceThreshold = 10000;
@@ -38,7 +42,7 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-export const MenbersMobile = () => {
+export const MenbersMobile = ({ i }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   // We only have 3 images, but we paginate them absolutely (ie 1, 2, 3, 4, 5...) and
@@ -51,12 +55,12 @@ export const MenbersMobile = () => {
     setPage([page + newDirection, newDirection]);
   };
 
+  const indexSVG =  { src: `${images[i]}` }
+
   return (
-    <div className="flex relative justify-center items-center w-screen h-screen ">
       <AnimatePresence initial={false} custom={direction}>
-        <motion.img
+        <motion.div
           key={page}
-          src={images[imageIndex]}
           custom={direction}
           variants={variants}
           initial="enter"
@@ -78,9 +82,8 @@ export const MenbersMobile = () => {
               paginate(-1);
             }
           }}
-        />
+        ><img src={`indexSVG`}  width={290} height={160}></img></motion.div>
       </AnimatePresence>
-    </div>
   );
 };
 

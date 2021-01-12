@@ -4,6 +4,7 @@ import { Flex, Image, Link } from '@chakra-ui/core'
 
 import SEO from '../../components/SEO'
 import { MenbersMobile } from '../../components/BoxMenbersMobile'
+import { Scroll } from '../../components/BoxMObileteste'
 
 
 interface Props {
@@ -31,10 +32,9 @@ export default function git({ user }) {
    src={user.owner.avatar_url} />
 
   <Flex>Next stars: {user.full_name},{user.forks},  {user.full_name} ,{user.stargazers_count}, {user.description}, {user.owner.login} 
- 
+  <Scroll/>
   </Flex>
 
-  <MenbersMobile/>
   </div>
 
   )}

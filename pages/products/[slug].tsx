@@ -9,6 +9,7 @@ import PrismicDOM from 'prismic-dom';
 import { Box, Flex, Image, List, SimpleGrid, Text, Icon, Divider, Button, Skeleton, Spinner } from "@chakra-ui/core";
 import { motion } from "framer-motion";
 import {FiStar} from 'react-icons/fi';
+import { MenbersMobile } from "../../components/BoxMenbersMobile";
 
 
 interface IProduct {
@@ -147,6 +148,8 @@ export default function Home({recommendedProducts}: HomeProps) {
                 
                )
              })}
+               <MenbersMobile/>
+
             
            </Flex>
            </Flex>

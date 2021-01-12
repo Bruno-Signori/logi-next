@@ -20,14 +20,20 @@ module.exports = {
         DEFAULT: '#c0ccda',
         light: '#393939',
         lightest: '#4E4E4E',
-      }
-    } 
+      },
+    },
+    extend: {
+      inset: {
+       '-2': '-1.2rem',
+      },
+  }, 
   },
   variants: {
     extend: {
       borderWidth: ['hover', 'focus'],
       margin: ['hover', 'focus'],
       padding: ['hover', 'focus']
+      
     },
   },
   plugins: [],

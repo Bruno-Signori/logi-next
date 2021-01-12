@@ -15,7 +15,8 @@ export default function Home() {
   const property = {
     title: "Logitech's High Performance Wirelees Gamming Mouse ",
   };
-  
+  const TextBoxOne = ["flex text-5xl font-bold justify-center tracking-tight text-blue-light"];
+  const TetxBoxTwo = ["relative text-1xl justify-center tracking-wide -top-2" ]
 
   return (
     <Grid as="main" height="100%" w="100%" justifyContent="center" alignItems="center" >
@@ -78,10 +79,10 @@ export default function Home() {
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
-      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >PRODUCTS</Text>
+      <text className={`${TextBoxOne}`} >PRODUCTS</text>
       </motion.div>
       </Box>
-      <Text size="1xl"  position="relative" justifyContent="center"   top="-34px">Which type of gear are you looking for</Text>
+      <text className={`${TetxBoxTwo}`}>Which type of gear are you looking for</text>
 
       <Link href="/products/allproducts">
       <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
@@ -101,10 +102,10 @@ export default function Home() {
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
-      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >SERVICES</Text>
+      <text className={`${TextBoxOne}`} >SERVICES</text>
       </motion.div>
       </Box>
-      <Text size="1xl"  position="relative" justifyContent="center"   top="-34px">We provide ore than high-tech products!</Text>
+      <text className={`${TetxBoxTwo}`}>We provide ore than high-tech products!</text>
 
       <Link href="/services">
       <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
@@ -125,10 +126,10 @@ export default function Home() {
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
-      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >Members</Text>
+      <text className={`${TextBoxOne}`}  >MEMBERS</text>
       </motion.div>
       </Box>
-      <Text size="1xl"  position="relative" justifyContent="center"  top="-34px">We Proudly introduce our powerfull members</Text>
+      <text className={`${TetxBoxTwo}`}>We Proudly introduce ou members</text>
 
       <Link href="/services">
       <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
@@ -149,10 +150,10 @@ export default function Home() {
         transition={{ delay: 1.5, duration: 1.9 }}
         
       >
-      <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >CONTACTS</Text>
+      <text className={`${TextBoxOne}`} >CONTACTS</text>
       </motion.div>
       </Box>
-      <Text size="1xl"  position="relative" justifyContent="center"   top="-34px">Some ways for you to contact us</Text>
+      <text className={`${TetxBoxTwo}`}>Some ways for you to contact us</text>
 
       <Link href="/services">
       <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
