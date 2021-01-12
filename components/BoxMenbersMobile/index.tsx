@@ -55,7 +55,6 @@ export const MenbersMobile = ({ i }) => {
     setPage([page + newDirection, newDirection]);
   };
 
-  const indexSVG =  { src: `${images[i]}` }
 
   return (
       <AnimatePresence initial={false} custom={direction}>
@@ -82,7 +81,7 @@ export const MenbersMobile = ({ i }) => {
               paginate(-1);
             }
           }}
-        ><img src={`indexSVG`}  width={290} height={160}></img></motion.div>
+        ><img src={`${images}`}  width={290} height={160}></img></motion.div>
       </AnimatePresence>
   );
 };
