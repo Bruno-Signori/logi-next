@@ -3,8 +3,8 @@ import { GetStaticProps, NextPageContext } from 'next'
 import { Flex, Image, Link } from '@chakra-ui/core'
 
 import SEO from '../../components/SEO'
-import { MenbersMobile } from '../../components/BoxMenbersMobile'
-import { Scroll } from '../../components/BoxMObileteste'
+import ScrollMembers from '../../components/BoxMObileteste'
+import { Slider } from '../../components/BoxMenbersMob'
 
 
 interface Props {
@@ -22,6 +22,7 @@ interface Props {
 
 export default function git({ user }) {
   return (
+    
     <div>
     <SEO 
     title="Github Repos" shouldExcludeTitleSuffix
@@ -32,7 +33,9 @@ export default function git({ user }) {
    src={user.owner.avatar_url} />
 
   <Flex>Next stars: {user.full_name},{user.forks},  {user.full_name} ,{user.stargazers_count}, {user.description}, {user.owner.login} 
-  <Scroll/>
+  <div className="ms:hidden">
+      <Slider/>
+      </div>
   </Flex>
 
   </div>
@@ -43,13 +46,14 @@ export default function git({ user }) {
 
 
 
-export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch('https://api.github.com/repos/vercel/next.js');
+export const getStaticProps: GetStaticProps = async ({}) => {
+
+  const response = await fetch(`https://api.github.com/repos/vercel/next.js`);
   const data = await response.json();
-  
   return {
     props: {
       user: data,
+      
     },
     revalidate: 1
   }

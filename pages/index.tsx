@@ -7,6 +7,7 @@ import BoxServicesContainer from '../components/BoxServicesContainer';
 import SEO from '../components/SEO';
 import BoxMouse from '../components/BoxMouse';
 import { BoxMenbers } from '../components/BoxMenbers';
+import { Slider } from '../components/BoxMenbersMob';
 
 
 
@@ -136,7 +137,11 @@ export default function Home() {
       </Link>
 
       </SimpleGrid>
+     
       </Box>
+      <div className="md:hidden sm:block ">
+      <Slider/>
+      </div>
       <BoxMenbers/>
 
 

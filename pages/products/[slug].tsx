@@ -20,7 +20,8 @@ interface IProduct {
 interface HomeProps {
   recommendedProducts: Document[];
 }
-
+const TextBoxOne = ["flex text-5xl font-bold justify-center tracking-tight text-blue-light"];
+const TetxBoxTwo = ["relative text-1xl justify-center tracking-wide -top-2" ]
 
 export default function Home({recommendedProducts}: HomeProps) {
   const router = useRouter()
@@ -51,10 +52,10 @@ export default function Home({recommendedProducts}: HomeProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.2 }}
                 transition={{ delay: 0.2, duration: 1.4 }}>
-              <Text flex="1" fontSize="6xl" fontWeight="bold" justifyContent="center" color="blue.300"  >PRODUCTS</Text>
-             </motion.div>
-            </Box>
-            <Text size="1xl"  position="relative" justifyContent="center"   top="-34px">Some ways for you to contact us</Text>
+                  <text className={`${TextBoxOne}`} >PRODUCTS</text>
+                  </motion.div>
+                  </Box>
+                  <text className={`${TetxBoxTwo}`}>Which type of gear are you looking for</text>
 
             </SimpleGrid>
         </Box>
@@ -95,7 +96,7 @@ export default function Home({recommendedProducts}: HomeProps) {
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="20px" as={FiStar}
+                        <Icon size="18px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.game) ? "blue.300" : "gray.600"}
                         />
@@ -108,7 +109,7 @@ export default function Home({recommendedProducts}: HomeProps) {
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="20px" as={FiStar}
+                        <Icon size="18px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.work) ? "blue.300" : "gray.600"}
                         />
@@ -122,7 +123,7 @@ export default function Home({recommendedProducts}: HomeProps) {
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="20px" as={FiStar}
+                        <Icon size="18px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.design) ? "blue.300" : "gray.600"}
                         />

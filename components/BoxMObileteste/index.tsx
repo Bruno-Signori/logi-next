@@ -1,13 +1,39 @@
 import * as React from "react";
+import { useEffect, useState } from 'react';
 
 
-export const Scroll = () => {
+export default function ScrollMembers(i) {
+  const [scroll, setScroll] = useState([]);
+
+  useEffect(() => {
+    async function loadScroll() {
+      
+      const response = [{"image": "office.png", "image2": "predator.png"}]
+      console.log(response);
+
+      setScroll(response)
+    }
+    loadScroll();
+    
+
+  }, [])
+
   return (
-    <div className="overflow-x-hidden overscroll-x-contain	 h-60 w-40 bg-blue-light" >
-    <div className="flex  h-4 w-4 bg-pink-light">9vMQD.MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD..MQD....</div>
-    <div className="flex float-right h-4 w-4 bg-gray">9vMQD...</div>
-    <div className="flex  float-right h-4 w-4 bg-gray-darkest-light">9vMQD...</div>
-
+    <div className="scroll-box">
+    <div role="list" className="scroll-box__wrapper">
+      {scroll.length === 0 ? (
+        <div />
+      ) : (
+        scroll.map(scroll => (
+          <div className=""
+            key={scroll.id}
+          >
+            <img src={`/${setScroll[i]}`}/>
+          </div>
+        ))
+      )}
     </div>
-  )
-}
+  </div>
+);
+
+  }
