@@ -9,76 +9,75 @@ import DividerCustom from '../Divider';
 const BoxMediaContacts: React.FC = () => {
   return (
    
-    <Box height="350px" width="1200px" textAlign="center" justifyItems="center" justifyContent="space-between"  >
-    <SimpleGrid justifyContent="center" columns={2}>
-      <Box  height="350px" textAlign="left" 
+    <div className="flex max-w-full h-auto justify-center  " >
+      <div className="hidden:grid grid-cols-2 gap-10 md:grid grid-cols-2 gap-4" >
+      <Box  className="h-2/4 mt-10 mx-10" >
         
-      >
         <Box >
-        <Image  color="blue.300" src="/rocketseat.svg" alt='rock' />
+            <Image  color="blue.300" src="/rocketseat.svg" alt='rock' />
         </Box>
         <SimpleGrid>
-        <Text marginTop="14px" marginBottom="8px" fontWeight="bold">Direct Channels</Text>
-        <Flex marginTop="10px">
-        <Box color="blue.300" as={FiPhone} size="25px" ></Box>
-              <DividerCustom  />
-              <Text position="relative" left="-20px">(54) 99612-7617</Text>
-              
+          <Text marginTop="14px" marginBottom="8px" fontWeight="bold">Direct Channels</Text>
+        
+          <Flex marginTop="10px">
+            <Box color="blue.300" as={FiPhone} size="25px" ></Box>
+            <DividerCustom  />
+            <Text position="relative" left="-20px">(54) 99612-7617</Text>
+          </Flex>
 
-            </Flex>
-            <Flex>
+          <Flex>
             <Box as={FiMail} color='blue.300' size="25px" ></Box>
-              <DividerCustom  />
-              <Text position="relative" left="-20px">brunowsignori@gmail.com</Text>
+            <DividerCustom  />
+            <Text position="relative" left="-20px">brunowsignori@gmail.com</Text>
+          </Flex>
 
-            </Flex>
+            <Text fontWeight="bold">Social media</Text>
+            <Flex marginTop="12px">
+                <Link href="http://instagram.com" >
+                <Box as={FiInstagram} color='blue.300' size="20px" ></Box>
+                <DividerCustom  />
+                </Link> 
+                
+                <Link href="http://facebook.com">
+                <Box left="-10px"as={FiFacebook} color='blue.300' size="20px" ></Box>
+                <DividerCustom  />
+                </Link> 
+                
+                <Link href="http://twitter.com">
+                <Box as={FiTwitter} color='blue.300' size="20px" ></Box>
+                <DividerCustom  />
+                </Link> 
 
-        <Text fontWeight="bold">Social media</Text>
-        <Flex marginTop="12px">
-              <Link href="http://instagram.com" >
-              <Box as={FiInstagram} color='blue.300' size="20px" ></Box>
-              <DividerCustom  />
-              </Link> 
-              
-              <Link href="http://facebook.com">
-              <Box left="-10px"as={FiFacebook} color='blue.300' size="20px" ></Box>
-              <DividerCustom  />
-              </Link> 
-              
-              <Link href="http://twitter.com">
-              <Box as={FiTwitter} color='blue.300' size="20px" ></Box>
-              <DividerCustom  />
-              </Link> 
+                <Link href="http://gmail.com">
+                <Box as={FiSend} color='blue.300' size="20px" ></Box>
+                <DividerCustom  />
+                </Link> 
 
-              <Link href="http://gmail.com">
-              <Box as={FiSend} color='blue.300' size="20px" ></Box>
-              <DividerCustom  />
-              </Link> 
-
-              <Link href="http://github.com">
-              <Box as={FiGithub} color='blue.300' size="20px" ></Box>
-              </Link> 
-
-
+                <Link href="http://github.com">
+                <Box as={FiGithub} color='blue.300' size="20px" ></Box>
+                </Link> 
           </Flex>
        </SimpleGrid>
        </Box>
-      <Box  height="350px"  borderRadius="12px" flex="1" justifyContent="space-between">
-      <Text textAlign="left" marginBottom="12px" fontWeight="bold">Social media</Text>
-      <Flex>
-        <Input variant="outline" placeholder="Your name" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
-        <Divider backgroundColor="blue.300" orientation="vertical" />
-        <Input variant="outline" placeholder="Your email" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
-      </Flex>
-      <Input marginTop="20px" variant="outline" placeholder="Subject" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
 
-      <Textarea marginTop="20px"  borderRadius="2px" placeholder="Message" />
-      <Button  marginTop="12px"  width="350px"   backgroundColor="blue.300" >SUBMIT</Button>
+       <Box  className="h-2/4 my-10 mx-10" flex="1" justifyContent="space-between">
+          <Text textAlign="left" marginBottom="12px" fontWeight="bold">Social media</Text>
+          <Flex>
+            <Input variant="outline" placeholder="Your name" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
+            <Divider backgroundColor="blue.300" orientation="vertical" />
+            <Input variant="outline" placeholder="Your email" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
+          </Flex>
 
-        </Box>
+          <Input marginTop="20px" variant="outline" placeholder="Subject" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
+          <Textarea marginTop="20px"  borderRadius="2px" placeholder="Message" />
 
-</SimpleGrid>
-</Box>
+          <Flex className="flex justify-center ">
+          <Button   marginTop="12px"  width="50%" alignSelf="center"  backgroundColor="blue.300" >SUBMIT</Button>
+          </Flex>
+      </Box>
+
+</div>
+</div>
 
   )
 } 

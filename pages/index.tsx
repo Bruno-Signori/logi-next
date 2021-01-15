@@ -21,22 +21,19 @@ export default function Home() {
 
   return (
     <Grid as="main" height="100%" w="100%" justifyContent="center" alignItems="center" >
-      <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
-        <Box d="flex" marginTop="100px" as="section" maxWidth="1250px" flexDirection="row" justifySelf="center" justifyContent="center" alignItems="center" >
+    <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
 
-       <Box height="100%"  width="100% " margin={6} flexDir="column" alignItems="center">
-       <motion.div 
-         initial={{ opacity: 0 }}
-         animate={{ opacity: 1 }}
-         transition={{ delay: 0.7, duration: 1.9 }} >
+      <div className="flex-1 justify-center h-full max-w-screen-2xl justify-items-center content-center " >
+      
+      <Box className="hidden  md:flex    max-w-screen-2xl flex-row  my-20 ml-4  justify-center items-center"  >
+       
+       <Box className="md:block h-full w-full" >
+       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}transition={{ delay: 0.7, duration: 1.9 }} >
 
-            < Heading size="2xl" lineHeight="shorter" marginTop={16}>G502 HERO WIRELLES</Heading>
+        < Heading size="2xl" lineHeight="shorter" marginTop={16}>G502 HERO WIRELLES</Heading>
         </motion.div >
 
-        <motion.div 
-         initial={{ opacity: 0 }}
-         animate={{ opacity: 1 }}
-         transition={{ delay: 0.8, duration: 1.9 }} >
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8, duration: 1.9 }} >
         <Text marginTop={4} fontSize="4xl">{property.title}</Text>
         <Text marginTop={8} fontSize="2xl">The Razer Ouraboras is outfitted whit the most advanced & configurable sensor, the all-new 8200dpi 4G sensor.It tracks so precisely, you always hit target exactly where you need to. </Text>
         <Text color="blue.300"   marginTop={4} fontSize="3xl">USD 99.99</Text>
@@ -58,15 +55,16 @@ export default function Home() {
         </motion.div>
       </Box>
 
-      <Box height="35%" width="35%" marginTop="150px">
+      <Box className="hidden  md:flex " height="100%" width="70%" justifyContent="center" marginTop="100px" marginRight="20px">
       <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.5, duration: 1.9 }}
+            transition={{  ease: "easeIn", delay: 1.5, duration: 1.9 }}
             >
-            
-      <Image  position="relative"  zIndex={9999}  src="/logitech.png" alt='rock' />
-      <Text transform="rotate(270deg)" color="blue.300" fontWeight="bold" position="relative"  fontSize="145px" float="right" bottom="267px" right="-135px" >G502</Text>
+      <Box className="relative flex-shrink-0 left-0 top-8  " >     
+      <Image  position="relative"   zIndex={9999}  src="/logitech.png" alt='rock' />
+      </Box>
+      <Text className="relative flex-shrink-1 left-32 -top-64   " transform="rotate(90deg)" color="blue.300" fontWeight="bold"  fontSize="145px"    >G502</Text>
       </motion.div>
     </Box>
     </Box>
@@ -130,7 +128,7 @@ export default function Home() {
       <text className={`${TextBoxOne}`}  >MEMBERS</text>
       </motion.div>
       </Box>
-      <text className={`${TetxBoxTwo}`}>We Proudly introduce ou members</text>
+      <text className={`${TetxBoxTwo}`}>We Proudly introduce our powerful members</text>
 
       <Link href="/services">
       <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
@@ -172,6 +170,7 @@ export default function Home() {
 
    
 
+    </div>
     </Grid>
     
      

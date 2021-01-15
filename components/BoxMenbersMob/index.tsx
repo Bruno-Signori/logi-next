@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/core';
+import { Box, Flex } from '@chakra-ui/core';
 import React, {useState} from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { ImgComp } from './imgComps';
@@ -24,7 +24,8 @@ export function Slider(){
 
 
   return(
-    <div className="flex relative border-none  w-60 h-60  p-0 m-5 justify-items-center overflow-hidden md:hidden ">
+    <div className="flex max-w-full h-auto justify-center">
+    <div className="flex relative border-none  w-80  h-72  p-0 m-5 justify-items-center overflow-hidden md:hidden ">
      {sliderArr.map((item,index)=>{
        return(
          <div key={index} style={{transform: `translateX(${x}%)`}} className="relative slide  min-w-full h-5/6 overflow-hidden " >
@@ -34,12 +35,12 @@ export function Slider(){
        )
      })
   }
-      <Box id="goLeft" as={FiChevronLeft}  color='blue.300' size="20px" onClick={goLeft} className="absolute cursor-pointer left-0 top-16 bg-opacity-10 bg-gray -translate-y-1/2 w-15 h-15 z-50"  ></Box>
-      <Box id="goRight" as={FiChevronRight}  color='blue.300' size="20px" onClick={goRight} className="absolute cursor-pointer right-0  top-16 bg-opacity-10 bg-gray -translate-y-1/2 w-15 h-15 z-50" >Rigth</Box>
+      <Box id="goLeft" as={FiChevronLeft}  color='blue.300' size="30px" onClick={goLeft} className="absolute cursor-pointer left-0 top-16 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50"  ></Box>
+      <Box id="goRight" as={FiChevronRight}  color='blue.300' size="30px" onClick={goRight} className="absolute cursor-pointer right-0  top-16 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50" >Rigth</Box>
  
 
     </div>
-
+    </div>  
 
   )
 }

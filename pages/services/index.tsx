@@ -5,6 +5,7 @@ import { Flex, Image, Link } from '@chakra-ui/core'
 import SEO from '../../components/SEO'
 import ScrollMembers from '../../components/BoxMObileteste'
 import { Slider } from '../../components/BoxMenbersMob'
+import BoxServicesContainer from '../../components/BoxServicesContainer'
 
 
 interface Props {
@@ -27,16 +28,12 @@ export default function git({ user }) {
     <SEO 
     title="Github Repos" shouldExcludeTitleSuffix
     />
-     <Image 
-   rounded="full"
-   size="150px"
-   src={user.owner.avatar_url} />
-
-  <Flex>Next stars: {user.full_name},{user.forks},  {user.full_name} ,{user.stargazers_count}, {user.description}, {user.owner.login} 
+ 
   <div className="ms:hidden">
       <Slider/>
       </div>
-  </Flex>
+      <BoxServicesContainer/>
+ 
 
   </div>
 
