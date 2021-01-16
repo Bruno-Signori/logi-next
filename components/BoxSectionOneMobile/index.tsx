@@ -17,7 +17,7 @@ export const SectionOneMobile: React.FC = () => {
           <Text className="text-center tracking-wider"  color="blue.300" fontWeight="bold"  fontSize="150px"    >G502</Text>
           </Box>
             <Box className="flex-shrink-1  justify-center justify-items-center max-w-full " >     
-          <Image   position="relative"   zIndex={9999}  src="/G502-mobile.png" alt='rock' />
+          <Image   position="relative"   zIndex={9999}  src="/g502-mobile.png" alt='rock' />
           </Box>
         </motion.div>
       </Box>
