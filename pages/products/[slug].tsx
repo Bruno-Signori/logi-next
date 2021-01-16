@@ -21,7 +21,7 @@ interface HomeProps {
   recommendedProducts: Document[];
 }
 const TextBoxOne = ["flex text-5xl font-bold justify-center tracking-tight text-blue-light"];
-const TetxBoxTwo = ["relative text-1xl justify-center tracking-wide -top-2" ]
+const TetxBoxTwo = ["relative z-40 text-1xl justify-center tracking-wide -top-2" ]
 
 export default function Home({recommendedProducts}: HomeProps) {
   const router = useRouter()
@@ -69,47 +69,48 @@ export default function Home({recommendedProducts}: HomeProps) {
                 whileHover={{ scale: 1.04  }}
                 transition={{ delay: 0.1, duration: 0.19 }}
                 >
-                <Flex maxW="sm" flexDir="row"  bg="gray.900"  align="center" justifySelf="center" h="500px"  marginX="15px" marginBottom="24px" rounded="lg" overflow="hidden">
+                <Flex maxW="sm" flexDir="row"  bg="gray.700"  align="center" justifySelf="center" h="500px"  marginX="15px" marginBottom="24px" rounded="lg" overflow="hidden">
                   
                   <Flex  justifyItems="center">
                    
                     <Box  key={recommendedProducts.id}>
                     <Link href={`/catalog/products/${recommendedProducts.uid}`}>
-                      <Flex  justifyItems="center" align="center" justify="center"  alignSelf="center">
-                    <Image  maxWidth='200px' paddingBottom="10px" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
+                      <Flex  justifyItems="top" align="top" justify="center"  alignSelf="top">
+                    <Image  className="bg-auto md:bg-contain max-h-50 align-top
+                    w-44" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
                     </Flex>
                    </Link>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
-                   <Link href={`/catalog/products/${recommendedProducts.uid}`}>
-                     
+                   <Link  href={`/catalog/products/${recommendedProducts.uid}`}>
+                     <text className="tracking-wider">
                        {PrismicDOM.RichText.asText(recommendedProducts.data.title)}
-                      
+                       </text>
                    </Link>
                    </Flex>
 
 
-                   <Text marginTop="8px" marginX={2} >{PrismicDOM.RichText.asText(recommendedProducts.data.description)}</Text>
+                   <Text className="mx-2 my-2 text-md text-center	" >{PrismicDOM.RichText.asText(recommendedProducts.data.description)}</Text>
                    
                    <Flex  align="center" marginTop="8px" justify="center" >
                    <Box mt="1" justifyItems="center"  alignSelf="center">
-                    <Text fontSize="14px" textAlign="center"  color="blue.300">Game</Text>
+                    <Text className="text-sm text-center text-blue-light">Game</Text>
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="18px" as={FiStar}
+                        <Icon size="16px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.game) ? "blue.300" : "gray.600"}
                         />
                       ))}
                     </Box>
-                    <Divider  backgroundColor="gray.900" paddingTop="40px" orientation="vertical" />
+                    <Divider  backgroundColor="gray.300" paddingTop="40px" orientation="vertical" />
                     <Box mt="1" textAlign="center" alignItems="center">
-                    <Text fontSize="14px" color="blue.300">Work</Text>
+                    <Text className="text-sm text-center text-blue-light">Work</Text>
 
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="18px" as={FiStar}
+                        <Icon size="16px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.work) ? "blue.300" : "gray.600"}
                         />
@@ -119,18 +120,18 @@ export default function Home({recommendedProducts}: HomeProps) {
                     
                     
                     <Box mt="1" alignItems="center">
-                    <Text fontSize="14px" textAlign="center" color="blue.300">Graphic </Text>
+                    <Text className="text-sm text-center text-blue-light whi">Graphic </Text>
                     {Array(5)
                       .fill("")
                       .map((_, i) => (
-                        <Icon size="18px" as={FiStar}
+                        <Icon size="16px" as={FiStar}
                           key={i}
                           color={i < (recommendedProducts.data.design) ? "blue.300" : "gray.600"}
                         />
                       ))}
                   </Box>
                   </Flex>
-                   <Flex alignItems="center" padding={10}   justifyContent="space-between" w="100%">
+                   <Flex className="justify-between mt-10 mx-3 justify-self-center">
                    <Text  >Price: $  {recommendedProducts.data.price}</Text>
                    <Button float="right" leftIcon="check" variant="solid"   backgroundColor="blue.300"  border="1px solid #19B5FE">
                     Add To Cart
@@ -173,9 +174,12 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   ]);
  
      return {
+      
       props:{
 
         recommendedProducts: recommendedProducts.results,
+      
+
       },
         revalidate: 1,
             

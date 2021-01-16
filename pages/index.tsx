@@ -8,6 +8,8 @@ import SEO from '../components/SEO';
 import BoxMouse from '../components/BoxMouse';
 import { BoxMenbers } from '../components/BoxMenbers';
 import { Slider } from '../components/BoxMenbersMob';
+import { SectionOneMobile } from '../components/BoxSectionOneMobile';
+
 
 
 
@@ -24,7 +26,7 @@ export default function Home() {
     <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
 
       <div className="flex-1 justify-center h-full max-w-screen-2xl justify-items-center content-center " >
-      
+      <SectionOneMobile />
       <Box className="hidden  md:flex    max-w-screen-2xl flex-row  my-20 ml-4  justify-center items-center"  >
        
        <Box className="md:block h-full w-full" >
@@ -119,12 +121,7 @@ export default function Home() {
      <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
       <SimpleGrid  justifyContent="center" textAlign="center" >
       <Box h="100%" >
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ delay: 1.5, duration: 1.9 }}
-        
-      >
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.3 }} transition={{ delay: 1.5, duration: 1.9 }}>
       <text className={`${TextBoxOne}`}  >MEMBERS</text>
       </motion.div>
       </Box>
@@ -135,12 +132,11 @@ export default function Home() {
       </Link>
 
       </SimpleGrid>
-     
       </Box>
-      <div className="md:hidden sm:block ">
-      <Slider/>
-      </div>
-      <BoxMenbers/>
+          <div className="md:hidden sm:block ">
+          <Slider/>
+          </div>
+          <BoxMenbers/>
 
 
 

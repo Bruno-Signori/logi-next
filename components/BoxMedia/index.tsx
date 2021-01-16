@@ -1,7 +1,6 @@
 import React from  'react';
 
 import {Box, Button, Flex, Grid, Heading, Input, Link, Text, Icon, Image, SimpleGrid, Divider, Textarea} from '@chakra-ui/core'
-import { motion, useCycle } from 'framer-motion'
 import { FiAirplay, FiFacebook, FiGithub, FiInstagram, FiMail, FiPhone, FiSend, FiTwitter } from "react-icons/fi";
 import DividerCustom from '../Divider';
 
@@ -10,8 +9,8 @@ const BoxMediaContacts: React.FC = () => {
   return (
    
     <div className="flex max-w-full h-auto justify-center  " >
-      <div className="hidden:grid grid-cols-2 gap-10 md:grid grid-cols-2 gap-4" >
-      <Box  className="h-2/4 mt-10 mx-10" >
+      <div className="hidden:grid grid-cols-2 gap-10 md:grid grid-cols-2 gap-4 mb-20" >
+      <Box  className="h-2/4  mx-10" >
         
         <Box >
             <Image  color="blue.300" src="/rocketseat.svg" alt='rock' />
@@ -60,15 +59,15 @@ const BoxMediaContacts: React.FC = () => {
        </SimpleGrid>
        </Box>
 
-       <Box  className="h-2/4 my-10 mx-10" flex="1" justifyContent="space-between">
-          <Text textAlign="left" marginBottom="12px" fontWeight="bold">Social media</Text>
+       <Box  className="h-2/4  mx-10 " flex="1" justifyContent="space-between">
+          <Text textAlign="left" marginBottom="12px" fontWeight="bold">Feel free to send us your message</Text>
           <Flex>
             <Input variant="outline" placeholder="Your name" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
             <Divider backgroundColor="blue.300" orientation="vertical" />
             <Input variant="outline" placeholder="Your email" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
           </Flex>
 
-          <Input marginTop="20px" variant="outline" placeholder="Subject" type="email" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
+          <Input marginTop="20px" variant="outline" placeholder="Subject" type="text" fontWeight="normal" alignContent="left" borderRadius="2px"></Input>
           <Textarea marginTop="20px"  borderRadius="2px" placeholder="Message" />
 
           <Flex className="flex justify-center ">

@@ -19,14 +19,15 @@ const variants = {
   }
 };
 
-const colors = ["#ffffff", "#ffffff", "#ffffff", "#ffffff", "ffffff"];
-const link = ["/", "/products/allproducts", "/services/", "/", "/" ];
+const colors = ["#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE" ];
+const link = ["/", "/products/allproducts", "/services/", "/", "/", "/" ];
 const text = ["Home", "Products", "Services", "Members", "Contact", "Sign in"];
 
 export const MenuItem = ({ i }) => {
   const style = { color: `${colors[i]}` };
+ 
   return (
-    <motion.li className="mt-6 flex-1 cursor-pointer items-center top-6 w-15 list-none"
+    <motion.li className="mt-6 flex-1 z-50 text-lg cursor-pointer items-center top-6 w-15 h-8 list-none last:border-white  "
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95}}
