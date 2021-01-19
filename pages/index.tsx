@@ -109,7 +109,8 @@ export default function Home() {
       <text className={`${TetxBoxTwo}`}>We provide ore than high-tech products!</text>
 
       <Link href="/services">
-      <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
+      <Button   border="0px"
+ rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
       </Link>
 
       </SimpleGrid>

@@ -24,7 +24,7 @@ export function Slider(){
 
 
   return(
-    <div className="flex max-w-full h-auto justify-center">
+    <div className="flex w-auto h-auto justify-center">
     <div className="flex relative border-none  w-80  h-72  p-0 m-5 justify-items-center overflow-hidden md:hidden ">
      {sliderArr.map((item,index)=>{
        return(
@@ -35,8 +35,8 @@ export function Slider(){
        )
      })
   }
-      <Box id="goLeft" as={FiChevronLeft}  color='blue.300' size="30px" onClick={goLeft} className="absolute cursor-pointer left-0 top-16 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50"  ></Box>
-      <Box id="goRight" as={FiChevronRight}  color='blue.300' size="30px" onClick={goRight} className="absolute cursor-pointer right-0  top-16 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50" >Rigth</Box>
+      <Box id="goLeft" as={FiChevronLeft}  color='blue.300' size="30px" onClick={goLeft} className="absolute cursor-pointer left-0 top-20 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50"  ></Box>
+      <Box id="goRight" as={FiChevronRight}  color='blue.300' size="30px" onClick={goRight} className="absolute cursor-pointer right-0  top-20 bg-opacity-5 bg-gray -translate-y-1/2 w-15 h-15 z-50" >Rigth</Box>
  
 
     </div>

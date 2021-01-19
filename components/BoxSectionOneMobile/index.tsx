@@ -9,14 +9,14 @@ export const SectionOneMobile: React.FC = () => {
   };
   return (
     
-      <Box className="block  md:hidden  max-w-full flex-row  my-4 ml-4  justify-center items-center"  >
+      <Box className="block  md:hidden  max-w-full flex-row  my-4 ml-4 mr-4 px-12 justify-center items-center"  >
       <Box className="flex  md:hidden mb-28 justify-center mt-12 justify-items-center " >
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{  ease: "easeIn", delay: 1.5, duration: 1.9 }}>
         <Box className="relative top-24 max-w-full max-h-full h-auto items-center" >
-          <Text className="text-center tracking-wider"  color="blue.300" fontWeight="bold"  fontSize="150px"    >G502</Text>
+          <Text className="text-center tracking-wider "  color="blue.300" fontWeight="bold" fontSize="150px"    >G502</Text>
           </Box>
-            <Box className="flex-shrink-1  justify-center justify-items-center max-w-full " >     
+            <Box className="flex-shrink-1  justify-center justify-items-center max-w-full px-3 " >     
           <Image   position="relative"   zIndex={9999}  src="/g502-mobile.png" alt='rock' />
           </Box>
         </motion.div>
@@ -34,10 +34,7 @@ export const SectionOneMobile: React.FC = () => {
        <Text className="tracking-widest " color="blue.300"   marginTop={4} fontSize="2xl">USD 99.99</Text>
        </motion.div> 
 
-       <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 1 }} >
+       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 1 }} >
        <Box marginTop={6}>
            <Button leftIcon="check" variant="solid" marginRight={6} backgroundColor="blue.300" borderColor="blue.300" border="1px solid #19B5FE">
            Add To Cart
