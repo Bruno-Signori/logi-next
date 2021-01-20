@@ -8,9 +8,9 @@ import DividerCustom from '../Divider';
 const BoxMediaContacts: React.FC = () => {
   return (
    
-    <div className="flex max-w-full h-auto justify-center  " >
-      <div className="hidden:grid grid-cols-2 gap-10 md:grid grid-cols-2 gap-4 mb-20" >
-      <Box  className="h-2/4  mx-10" >
+    <div className=" md:block flex w-auto h-auto justify-center  " >
+      <div className=" hidden:grid grid-cols-2 gap-10 md:grid  mb-20" >
+      <Box  className="h-2/4  justify-center mx-10" >
         
         <Box >
             <Image  color="blue.300" src="/rocketseat.svg" alt='rock' />

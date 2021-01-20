@@ -26,9 +26,12 @@ export default function Home() {
     <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
 
       <div className="flex-1 justify-center h-full max-w-screen-2xl justify-items-center content-center " >
+        <Box className="w-screen h-auto">
       <SectionOneMobile />
+      </Box>
+
       <Box className="hidden  md:flex    max-w-screen-2xl flex-row  my-20 ml-4  justify-center items-center"  >
-       
+     
        <Box className="md:block h-full w-full" >
        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}transition={{ delay: 0.7, duration: 1.9 }} >
 

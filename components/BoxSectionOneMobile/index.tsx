@@ -1,7 +1,7 @@
-import { Box, Button, Heading, Text, Image } from '@chakra-ui/core';
+import { Box, Button, Heading, Text } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 import React from  'react';
-
+import Image from 'next/image'
 
 export const SectionOneMobile: React.FC = () => {
   const property = {
@@ -9,20 +9,22 @@ export const SectionOneMobile: React.FC = () => {
   };
   return (
     
-      <Box className="block  md:hidden  max-w-full flex-row  my-4 ml-4 mr-4 px-12 justify-center items-center"  >
-      <Box className="flex  md:hidden mb-28 justify-center mt-12 justify-items-center " >
+      <Box className="block  md:hidden  max-w-7xl flex-row  p-2 justify-center items-center"  >
+      <Box className="flex  md:hidden pb-36  justify-center  justify-items-center " >
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{  ease: "easeIn", delay: 1.5, duration: 1.9 }}>
-        <Box className="relative top-24 max-w-full max-h-full h-auto items-center" >
-          <Text className="text-center tracking-wider "  color="blue.300" fontWeight="bold" fontSize="150px"    >G502</Text>
+        <Box className="relative top-24 max-w-7xl max-h-full px-1 h-auto items-center" >
           </Box>
-            <Box className="flex-shrink-1  justify-center justify-items-center max-w-full px-3 " >     
-          <Image   position="relative"   zIndex={9999}  src="/g502-mobile.png" alt='rock' />
+            <Box className="flex-row  justify-center justify-items-center max-w-full  " >   
+            <Text className="relative text-center tracking-wider px-5 text-9xl top-16 w-screen h-full font-semibold max-h-screen max-w-full"  color="blue.300"    >G502</Text>
+            <Box className="flex justify-center justify-items-center align-middle items-center">
+          <Image className="  " priority={true} width={360} height={210} layout="fixed"  src="/g502-mobile.png" alt='rock' />
+          </Box>
           </Box>
         </motion.div>
       </Box>
        
-      <Box className="md:block h-full  w-full max-w-full" >
+      <Box className="md:flex max-w-full h-full  w-auto " >
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}transition={{ delay: 0.7, duration: 1.9 }} >
 
        < Heading className="tracking-wider " fontSize="4xl">G502 HERO WIRELLES</Heading>
