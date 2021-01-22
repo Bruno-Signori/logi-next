@@ -8,7 +8,7 @@ import DividerCustom from '../Divider';
 const BoxMediaContacts: React.FC = () => {
   return (
    
-    <div className=" md:block flex w-auto h-auto justify-center  " >
+    <div className=" md:block  flex w-auto h-auto justify-center  " >
       <div className=" hidden:grid grid-cols-2 gap-10 md:grid  mb-20" >
       <Box  className="h-2/4  justify-center mx-10" >
         

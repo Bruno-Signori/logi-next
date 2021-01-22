@@ -43,7 +43,7 @@ const MyFooter: React.FC = ()  => {
     </Box>
    
   </Grid>
-  <Divider backgroundColor="gray.800" fontWeight="bold" marginLeft="25vh" marginRight="25vh" marginTop="20px" />
+  <Divider backgroundColor="gray.800" fontWeight="bold"  marginTop="20px" />
   <Text fontSize="12px" marginTop="14px" fontWeight="300">COPYRIGTH 2020 TECHGEAR INC. ALL RIGTHS RESERVED</Text>
 
   </Box>

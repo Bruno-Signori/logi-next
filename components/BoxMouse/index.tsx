@@ -4,13 +4,13 @@ import React from  'react';
 
 
 
-const BoxOneMouse = ["flex w-96 h-86 py-9 mt-16 mx-2 bg-gray-light rounded-xl justify-center " ];
+const BoxOneMouse = ["flex w-96  h-86 py-9 mt-16 mx-2 bg-gray-light rounded-xl justify-center " ];
 const TextMouse =["text-center	font-semibold text-2xl tracking-wide"]
 
 export const BoxMouse: React.FC = () => {
   return (
 <div className="flex max-w-full h-auto justify-center  " >
-  <div className="hidden:grid grid-cols-3 gap-10 md:grid grid-cols-2 gap-4" >
+  <div className="hidden:grid grid-cols-3 gap-10  md:grid grid-cols-2 gap-4" >
  
       <Box className={`${BoxOneMouse}`}>
         <Box>

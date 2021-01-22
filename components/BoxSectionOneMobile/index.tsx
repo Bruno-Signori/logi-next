@@ -1,7 +1,6 @@
 import { Box, Button, Heading, Text } from '@chakra-ui/core';
 import { motion } from 'framer-motion';
 import React from  'react';
-import Image from 'next/image'
 
 export const SectionOneMobile: React.FC = () => {
   const property = {
@@ -9,16 +8,16 @@ export const SectionOneMobile: React.FC = () => {
   };
   return (
     
-      <Box className="block  md:hidden  max-w-7xl flex-row   justify-center items-center"  >
+      <Box className="block  md:hidden  max-w-7xl flex-row  justify-center items-center"  >
       <Box className="flex  md:hidden pb-36  justify-center  justify-items-center " >
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{  ease: "easeIn", delay: 1.5, duration: 1.9 }}>
-        <Box className="relative top-24 max-w-7xl max-h-full h-auto items-center" >
+        <Box className="relative top-24 w-max max-h-full h-auto items-center" >
           </Box>
-            <Box className="flex-row  justify-center justify-items-center max-w-full  " >   
-            <Text className="relative text-center tracking-wider px-5 text-9xl top-16 w-screen h-full font-semibold max-h-screen max-w-full"  color="blue.300"    >G502</Text>
+            <Box className="flex-row justify-center justify-items-center max-w-full  " >   
+            <Text className="relative text-center tracking-wider text-9xl top-16  h-full font-semibold w-max max-w-full"  color="blue.300"    >G502</Text>
             <Box className="flex justify-center justify-items-center align-middle items-center">
-          <Image className="  " priority={true} width={360} height={210} layout="fixed"  src="/g502-mobile.png" alt='rock' />
+          <img className="z-50  "  width={360} height={210}   src="/g502-mobile.png" alt='rock' />
           </Box>
           </Box>
         </motion.div>
