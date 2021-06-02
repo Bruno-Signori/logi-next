@@ -9,7 +9,7 @@ const MyFooter: React.FC = ()  => {
     <Box w="100%" >
     <Text marginTop="18px" fontSize="14px" fontWeight="bold" >PRODUCTS</Text>
       <Text fontSize="14px" marginTop="8px">Gaming</Text>
-      <Text fontSize="14px" marginTop="8px">Graphic Design</Text>
+      <Text fontSize="14px" marginTop="8px">Graphicc Design</Text>
       <Text fontSize="14px" marginTop="8px">Office</Text>
       <Text fontSize="14px" marginTop="8px">Family</Text>
       <Text fontSize="14px" marginTop="8px">Personalized</Text>
