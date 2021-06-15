@@ -76,14 +76,14 @@ export default function Home({recommendedProducts}: HomeProps) {
                   <Flex  justifyItems="center">
                    
                     <Box  key={recommendedProducts.id}>
-                    <Link href={`/products/${recommendedProducts.uid}`}>
+                    <Link href={`${recommendedProducts.uid}`}>
                       <Flex  justifyItems="top" align="top" justify="center"  alignSelf="top">
                     <Image  className="bg-auto md:bg-contain max-h-50 align-top
                     w-44" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
                     </Flex>
                    </Link>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
-                   <Link  href={`/products/${recommendedProducts.uid}`}>
+                   <Link  href={`${recommendedProducts.uid}`}>
                      <text className="tracking-wider">
                        {PrismicDOM.RichText.asText(recommendedProducts.data.title)}
                        </text>
@@ -160,21 +160,11 @@ export default function Home({recommendedProducts}: HomeProps) {
     </div>
   )
 }
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    // deixar o paths: [], desta maneira com fallback:true ira carregar as paginas conforme os usuarios irem acessando.
-    paths: [],
-    // fallback ira atualizar as categorias sempre que alguma seja adicionada, ou seja, sempre que um usuario buscar uma rota que ainda não foi gerada
-    // ele ira buscar de forma automatica se essa rota existe. gerando ela sem precisar fazer uma nova build toda vez
-    // tambem precisamos passar um if (router.isfallback) no começo da const
-    fallback: true,
-  }
-}
+
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const recommendedProducts = await client().query([
     Prismic.Predicates.at('document.type', 'products')
   ]);
-  console.log(recommendedProducts)
 
      return {
       
