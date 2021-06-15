@@ -23,7 +23,7 @@ const MyHeader: React.FC = () => {
     <div className="hidden md:block items-center justify-items-end ">
     <div className=" text-1xl space-x-6 tracking-widest"> 
             <a href="/" className="text-white px-3 py-2 focus:border-b-2 border-blue-light  hover:text-blue-light   ">Home</a>
-            <a href="/products/allproducts" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500  rounded-md ">Products</a>
+            <a href="/products" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500  rounded-md ">Products</a>
             <a href="/services" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Services</a>
             <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Members</a>
             <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Contact</a>

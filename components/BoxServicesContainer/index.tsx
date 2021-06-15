@@ -1,13 +1,39 @@
-import React from  'react';
+import React  from  'react';
 import {Box, Flex, Text, Image, SimpleGrid} from '@chakra-ui/core'
-import {motion} from 'framer-motion'
+import {motion, useAnimation} from 'framer-motion'
+
+import {useInView} from 'react-intersection-observer'
+import { useEffect } from 'react';
 
 // <Image size="150px" position="relative" top="-40px" float='left' src="/shield.png" alt='rock' />
 const BoxOneServices = ["flex-1 max-w-full max-h-full py-4 my-7 mx-12 bg-gray-light rounded-xl md:mx-6" ]
 export const BoxServicesContainer: React.FC = () => {
+  const {ref, inView} = useInView({
+    threshold: 0.1
+  });
+
+  const animation = useAnimation()
+  useEffect(() => { 
+    if(inView){
+      animation.start({
+        opacity: 1,
+        transition: {
+        opacity: 0, duration: 0.5
+        }
+      })
+    
+    }
+    if (!inView) {
+      animation.start({ opacity: 0.3})
+    }
+  }, [inView]);
+
+  
   return (
-  <div className="flex max-w-full h-auto justify-center  " >
-    <div className="hidden:grid grid-cols-2 gap-4 md:grid grid-cols-2 gap-4" >
+  <div ref={ref}  className="flex max-w-full h-auto justify-center  " >
+    <motion.div  className=" hidden:grid grid-cols-2 gap-4 md:grid grid-cols-2 gap-4 "
+    animate={animation}
+    >
       
       <Box className={`${BoxOneServices}`}>
         <Image size="150px" position="relative" top="-40px" float='left' src="/shield.png" alt='rock' />
@@ -44,7 +70,7 @@ export const BoxServicesContainer: React.FC = () => {
           </Box>
       </Box>
 
-    </div>
+    </motion.div>
   </div>
 
   )

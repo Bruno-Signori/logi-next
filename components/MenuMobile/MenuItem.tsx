@@ -20,7 +20,7 @@ const variants = {
 };
 
 const colors = ["#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE", "#19B5FE" ];
-const link = ["/", "/products/allproducts", "/services/", "/", "/", "/" ];
+const link = ["/", "/products", "/services/", "/", "/", "/" ];
 const text = ["Home", "Products", "Services", "Members", "Contact", "Sign in"];
 
 export const MenuItem = ({ i }) => {

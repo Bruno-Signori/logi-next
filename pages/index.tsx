@@ -1,5 +1,6 @@
 
-import {Box, Button, Flex, Grid, Heading, Input, Link, Text, Icon, Image, SimpleGrid} from '@chakra-ui/core';
+import {Box, Button, Flex, Grid, Heading, Input,  Text, Icon, Image, SimpleGrid} from '@chakra-ui/core';
+import Link from 'next/link'
 import { motion } from 'framer-motion';
 
 import BoxMediaContacts from '../components/BoxMedia';
@@ -9,9 +10,16 @@ import BoxMouse from '../components/BoxMouse';
 import { BoxMenbers } from '../components/BoxMenbers';
 import { Slider } from '../components/BoxMenbersMob';
 import { SectionOneMobile } from '../components/BoxSectionOneMobile';
+import NewComponet from '../components/NewComponet';
+import dynamic from "next/dynamic";
 
 
-
+const Scroll = dynamic(
+  () => {
+    return import("../components/NewComponet");
+  },
+  { ssr: false }
+);
 
 export default function Home() {
 
@@ -26,7 +34,8 @@ export default function Home() {
     <Grid className="w-screen" as="main"   justifyContent="center" alignItems="center" >
     <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
     <div className="flex-1 justify-center h-full  max-w-screen-2xl justify-items-center content-center " >
-        
+   
+
       <Box className="w-screen h-auto">
       <SectionOneMobile />
       </Box>
@@ -67,7 +76,7 @@ export default function Home() {
             transition={{  ease: "easeIn", delay: 1.5, duration: 1.9 }}
             >
         <Box className="relative flex-shrink-0 left-0 top-8  " >     
-        <Image  position="relative"   zIndex={9999}  src="/logitech.png" alt='rock' />
+        <Image   position="relative"   zIndex={9999}  src="/logitech.png" alt='rock' />
         </Box>
         <Text className="relative flex-shrink-1 left-32 -top-64   " transform="rotate(90deg)" color="blue.300" fontWeight="bold"  fontSize="145px"    >G502</Text>
         </motion.div>
@@ -86,7 +95,7 @@ export default function Home() {
             </Box>
             <text className={`${TetxBoxTwo}`}>Which type of gear are you looking for</text>
 
-            <Link href="/products/allproducts">
+            <Link href="/products">
             <Button rightIcon="arrow-forward" variant="link" color="blue.300"   >View more</Button>
             </Link>
 
@@ -160,7 +169,11 @@ export default function Home() {
           </SimpleGrid>
       </Box>
     <BoxMediaContacts />
-    
+    <div className="fixed bottom-2 right-0">
+    <Scroll />
+    </div>
+
+   
     
     </div>
     </Grid>

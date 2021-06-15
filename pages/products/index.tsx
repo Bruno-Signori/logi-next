@@ -10,9 +10,11 @@ import { Box, Flex, Image, List, SimpleGrid, Text, Icon, Divider, Button, Skelet
 import { motion } from "framer-motion";
 import {FiStar} from 'react-icons/fi';
 import { MenbersMobile } from "../../components/BoxMenbersMobile";
+import NewComponet from "../../components/NewComponet";
 
 
 interface IProduct {
+  slug: string;
   id: string;
   title: string;
 }
@@ -74,14 +76,14 @@ export default function Home({recommendedProducts}: HomeProps) {
                   <Flex  justifyItems="center">
                    
                     <Box  key={recommendedProducts.id}>
-                    <Link href={`/catalog/products/${recommendedProducts.uid}`}>
+                    <Link href={`/products/${recommendedProducts.uid}`}>
                       <Flex  justifyItems="top" align="top" justify="center"  alignSelf="top">
                     <Image  className="bg-auto md:bg-contain max-h-50 align-top
                     w-44" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
                     </Flex>
                    </Link>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
-                   <Link  href={`/catalog/products/${recommendedProducts.uid}`}>
+                   <Link  href={`/products/${recommendedProducts.uid}`}>
                      <text className="tracking-wider">
                        {PrismicDOM.RichText.asText(recommendedProducts.data.title)}
                        </text>
@@ -172,7 +174,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const recommendedProducts = await client().query([
     Prismic.Predicates.at('document.type', 'products')
   ]);
- 
+  console.log(recommendedProducts)
+
      return {
       
       props:{
