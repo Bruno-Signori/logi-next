@@ -76,14 +76,14 @@ export default function Home({recommendedProducts}: HomeProps) {
                   <Flex  justifyItems="center">
                    
                     <Box  key={recommendedProducts.id}>
-                    <Link href={`${recommendedProducts.uid}`}>
+                    <Link href={`products/${recommendedProducts.uid}`}>
                       <Flex  justifyItems="top" align="top" justify="center"  alignSelf="top">
                     <Image  className="bg-auto md:bg-contain max-h-50 align-top
                     w-44" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
                     </Flex>
                    </Link>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
-                   <Link  href={`${recommendedProducts.uid}`}>
+                   <Link  href={`products/${recommendedProducts.uid}`}>
                      <text className="tracking-wider">
                        {PrismicDOM.RichText.asText(recommendedProducts.data.title)}
                        </text>
