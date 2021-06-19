@@ -2,6 +2,7 @@ import React from  'react';
 import Image from  'next/image';
 import {motion} from "framer-motion";
 import {MenuMobile} from '../MenuMobile'
+import Link from 'next/link';
 
 
 // First, create an alias for breakpoints
@@ -21,12 +22,26 @@ const MyHeader: React.FC = () => {
      
     
     <div className="hidden md:block items-center justify-items-end ">
-    <div className=" text-1xl space-x-6 tracking-widest"> 
-            <a href="/" className="text-white px-3 py-2 focus:border-b-2 border-blue-light  hover:text-blue-light   ">Home</a>
-            <a href="/products" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500  rounded-md ">Products</a>
-            <a href="/services" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Services</a>
-            <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Members</a>
-            <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  rounded-md  ">Contact</a>
+    <div className=" text-1xl space-x-6 tracking-widest">
+            <Link href={"/"}> 
+                <a href="/" className="text-white px-3 py-2 focus:border-b-2  border-blue-light  hover:text-blue-light  ">Home</a>
+            </Link>
+
+            <Link href={"/products"}> 
+                <a href="/products" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500 ">Products</a>
+            </Link>
+            
+            <Link href={"/services"}> 
+                <a href="/services" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Services</a>
+            </Link>
+
+            <Link href={"/"}> 
+               <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Members</a>
+            </Link>
+
+            <Link href={"/"}> 
+               <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Contact</a>
+            </Link>
             <button className="border-solid border-2 border-blue-light px-3 py-2 rounded-md focus:bg-gray-light hover:bg-gray-lightest"  >Sign in </button>
 
           </div>

@@ -6,6 +6,7 @@ import SEO from '../../components/SEO'
 import ScrollMembers from '../../components/BoxMObileteste'
 import { Slider } from '../../components/BoxMenbersMob'
 import BoxServicesContainer from '../../components/BoxServicesContainer'
+import DemoCarousel from '../../components/CarouselComponent'
 
 
 interface Props {
@@ -33,6 +34,7 @@ export default function git({ user }) {
       <Slider/>
       </div>
       <BoxServicesContainer/>
+      <DemoCarousel/>
  
 
   </div>
