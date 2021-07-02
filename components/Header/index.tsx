@@ -31,15 +31,15 @@ const MyHeader: React.FC = () => {
                 <a href="/products" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light font-500 ">Products</a>
             </Link>
             
-            <Link href={"/services"}> 
+            <Link href="/#services"> 
                 <a href="/services" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Services</a>
             </Link>
 
-            <Link href={"/"}> 
+            <Link href="/#menbers"> 
                <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Members</a>
             </Link>
 
-            <Link href={"/"}> 
+            <Link href="/#contact"> 
                <a href="/" className="text-gray-300 px-3 py-2  focus:border-b-2 border-blue-light  hover:text-blue-light  ">Contact</a>
             </Link>
             <button className="border-solid border-2 border-blue-light px-3 py-2 rounded-md focus:bg-gray-light hover:bg-gray-lightest"  >Sign in </button>

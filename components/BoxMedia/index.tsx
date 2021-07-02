@@ -13,7 +13,7 @@ const BoxMediaContacts: React.FC = () => {
       <Box  className="h-2/4  justify-center mx-10" >
         
         <Box >
-            <Image  color="blue.300" src="/rocketseat.svg" alt='rock' />
+            <Image  color="blue.300" src="/logitechg-overlay.svg" alt='rock' />
         </Box>
         <SimpleGrid>
           <Text marginTop="14px" marginBottom="8px" fontWeight="bold">Direct Channels</Text>

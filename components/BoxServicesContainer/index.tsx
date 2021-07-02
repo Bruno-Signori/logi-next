@@ -30,7 +30,7 @@ export const BoxServicesContainer: React.FC = () => {
 
   
   return (
-  <div ref={ref}  className="flex max-w-full h-auto justify-center  " >
+  <div  ref={ref}  className="flex max-w-full h-auto justify-center  " >
     <motion.div  className=" hidden:grid grid-cols-2 gap-4 md:grid grid-cols-2 gap-4 "
     animate={animation}
     >

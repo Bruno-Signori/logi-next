@@ -41,7 +41,7 @@ export default function Home() {
       <SectionOneMobile />
       </Box>
 
-      <Box className="hidden  md:flex    max-w-screen-2xl flex-row  my-20 ml-4  justify-center items-center"  >
+      <Box className="hidden  md:flex  max-w-screen-2xl flex-row  my-20 ml-4  justify-center items-center"  >
       <Box className="md:block h-full w-full" >
       
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}transition={{ delay: 0.7, duration: 1.9 }} >
@@ -106,7 +106,7 @@ export default function Home() {
 
 
 
-     <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
+     <Box id={"services"} justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
         <SimpleGrid  justifyContent="center" textAlign="center" >
         <Box h="100%" >
         <motion.div 
@@ -128,7 +128,7 @@ export default function Home() {
 
 
       
-     <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
+     <Box id={"menbers"}justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
           <SimpleGrid  justifyContent="center" textAlign="center" >
           <Box h="100%" >
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 0.3 }} transition={{ delay: 1.5, duration: 1.9 }}>
@@ -150,7 +150,7 @@ export default function Home() {
 
 
 
-      <Box justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
+      <Box id={"contact"}justifyContent="center" textAlign="center" marginTop="200px" marginBottom="100px" >
           <SimpleGrid  justifyContent="center" textAlign="center" >
           <Box h="100%" >
           <motion.div 

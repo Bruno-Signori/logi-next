@@ -67,7 +67,7 @@ export default function Home({recommendedProducts}: HomeProps) {
 
        
       <Flex flexDir="row" flexWrap="wrap" justifyContent="center" alignItems="baseline">      
-        <Flex  flexWrap="wrap" justifyContent="center" alignContent="space-between"  >
+        <Flex className="max-w-screen-xl" flexWrap="wrap" justifyContent="center" alignContent="space-between"  >
              {recommendedProducts.map(recommendedProducts =>{
                return (
                 <motion.div 
