@@ -20,7 +20,7 @@ export const BoxMenbers: React.FC = () => {
                 duration: 1.5,
                 ease: "easeInOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
-                loop: Infinity,
+                loop: 1,
                 repeatDelay: 6
               }}
           >
@@ -45,7 +45,7 @@ export const BoxMenbers: React.FC = () => {
                 duration: 1.5,
                 ease: "easeInOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
-                loop: Infinity,
+                loop: 1,
                 repeatDelay: 7.5
               }}
           >
@@ -69,7 +69,7 @@ export const BoxMenbers: React.FC = () => {
                 duration: 1.5,
                 ease: "easeInOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
-                loop: Infinity,
+                loop: 1,
                 repeatDelay: 9
               }}
           >
@@ -93,7 +93,7 @@ export const BoxMenbers: React.FC = () => {
                 duration: 1.5,
                 ease: "easeInOut",
                 times: [0, 0.2, 0.5, 0.8, 1],
-                loop: Infinity,
+                loop: 1,
                 repeatDelay: 10.5
               }}
           >

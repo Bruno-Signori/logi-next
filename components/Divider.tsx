@@ -9,8 +9,8 @@ const DividerCustom: React.FC = () => {
       columnGap={12}
       opacity={0.4}
     >
-      <ChakraDivider marginY={6}/>
-      <ChakraDivider marginY={6}/>
+      <ChakraDivider />
+      <ChakraDivider />
 
     </Grid>
   );

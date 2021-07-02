@@ -44,7 +44,7 @@ const MyFooter: React.FC = ()  => {
    
   </Grid>
   <Divider backgroundColor="gray.800" fontWeight="bold"  marginTop="20px" />
-  <Text fontSize="12px" marginTop="14px" fontWeight="300">COPYRIGTH 2020 TECHGEAR INC. ALL RIGTHS RESERVED</Text>
+  <Text fontSize="12px" marginTop="14px" fontWeight="300">COPYRIGTH 2021 B.S ALL RIGTHS RESERVED</Text>
 
   </Box>
   )

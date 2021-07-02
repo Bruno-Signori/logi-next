@@ -25,10 +25,10 @@ export function Slider(){
 
   return(
     <div className="flex w-auto h-auto justify-center">
-    <div className="flex relative border-none  w-80  h-72  p-0 m-5 justify-items-center overflow-hidden md:hidden ">
+    <div className="flex relative border-none  w-80  p-0  justify-items-center overflow-hidden md:hidden ">
      {sliderArr.map((item,index)=>{
        return(
-         <div key={index} style={{transform: `translateX(${x}%)`}} className="relative slide  min-w-full h-5/6 overflow-hidden " >
+         <div key={index} style={{transform: `translateX(${x}%)`}} className="relative slide  min-w-full  overflow-hidden " >
            {item}
       
             </div>

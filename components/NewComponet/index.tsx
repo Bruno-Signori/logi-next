@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'; 
 import { useViewportSpy, useWillUnmount, useWindowScroll } from 'beautiful-react-hooks'; 
 import { MenuMobile } from '../MenuMobile';
+import FloatMenu from '../FloatingMenu'
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -49,8 +50,8 @@ const ViewportSpyComponent = () => {
       >
           <MenuMobile/>
       </motion.div>
-       <div style={{margin: '20px 0'}}> 
-          {isVisible ? "ok" : ''}
+       <div style={{margin: '60px 0'}}> 
+          {isVisible ? "" : ''}
          
        </div>
      </div>

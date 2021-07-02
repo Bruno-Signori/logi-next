@@ -24,15 +24,16 @@ const link = ["/", "/products", "/services/", "/", "/", "/" ];
 const text = ["Home", "Products", "Services", "Members", "Contact", "Sign in"];
 
 export const MenuItem = ({ i }) => {
-  const style = { color: `${colors[i]}` };
+  const style = { color: `${colors[i]}`, zIndex: 99999};
+  
  
   return (
-    <motion.li className="mt-6 flex-1 z-50 text-lg cursor-pointer items-center top-6 w-15 h-8 list-none last:border-white  "
+    <motion.li className="mt-6 flex-1 text-lg cursor-pointer items-center top-6 w-15 h-8 list-none last:border-white  "
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95}}
     >
-      <Link 
+      <Link
         _hover={{ color:"gray.300" }}
        _focus={{
         outline: "none",

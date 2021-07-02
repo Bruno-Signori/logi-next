@@ -10,7 +10,10 @@ import { Box, Flex, Image, List, SimpleGrid, Text, Icon, Divider, Button, Skelet
 import { motion } from "framer-motion";
 import {FiStar} from 'react-icons/fi';
 import { MenbersMobile } from "../../components/BoxMenbersMobile";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+
 import NewComponet from "../../components/NewComponet";
+import { Carousel } from "react-responsive-carousel";
 
 
 interface IProduct {
@@ -76,12 +79,17 @@ export default function Home({recommendedProducts}: HomeProps) {
                   <Flex  justifyItems="center">
                    
                     <Box  key={recommendedProducts.id}>
-                    <Link href={`products/${recommendedProducts.uid}`}>
-                      <Flex  justifyItems="top" align="top" justify="center"  alignSelf="top">
-                    <Image  className="bg-auto md:bg-contain max-h-50 align-top
-                    w-44" src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
+                      <Flex justifyItems="top" align="top" justify="center"  alignSelf="center"  >
+                        <Carousel showStatus={false} showThumbs={false} className="bg-auto md:bg-contain h-56 align-top
+                    w-56" >
+                     <div >
+                    <Image  src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
+                    </div>
+                    <div>
+                     <Image  src={recommendedProducts.data.thumbnail.url}  alt='mouse g502'/>
+                    </div>
+                    </Carousel>
                     </Flex>
-                   </Link>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
                    <Link  href={`products/${recommendedProducts.uid}`}>
                      <text className="tracking-wider">

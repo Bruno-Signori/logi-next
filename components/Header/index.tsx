@@ -15,9 +15,9 @@ const MyHeader: React.FC = () => {
     transition={{ duration: 1.1 }}
     >
     <div className="sm:px-7 max-w-screen-3xl justify-between  py-3  md:flex px-5 justify-between items-center"  >
-     <div className="sm:py-2 " >
-     <Image width={190} height={40} src="/rocketseat.svg" alt='rock' />
-     </div>
+    <Link href={"/"} >
+     <Image className="sm:py-2 cursor-pointer"  width={190} height={40} src="/logitechg-overlay.svg" alt='rock' />
+     </Link>
   
      
     

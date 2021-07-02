@@ -30,9 +30,10 @@ export default function Home() {
   const TetxBoxTwo = ["relative text-1xl justify-center tracking-wide -top-2" ]
 
   return (
-    
-    <Grid className="w-screen" as="main"   justifyContent="center" alignItems="center" >
+    <Grid className="max-w-screen overflow-hidden" as="main"   justifyContent="center" alignItems="center" >
+
     <SEO title="TechGear, logitech landing page" shouldExcludeTitleSuffix />
+    
     <div className="flex-1 justify-center h-full  max-w-screen-2xl justify-items-center content-center " >
    
 

@@ -18,19 +18,19 @@ const BoxMediaContacts: React.FC = () => {
         <SimpleGrid>
           <Text marginTop="14px" marginBottom="8px" fontWeight="bold">Direct Channels</Text>
         
-          <Flex marginTop="10px">
+          <Flex marginTop="12px">
             <Box color="blue.300" as={FiPhone} size="25px" ></Box>
             <DividerCustom  />
             <Text position="relative" left="-20px">(54) 99612-7617</Text>
           </Flex>
 
-          <Flex>
+          <Flex marginTop="12px">
             <Box as={FiMail} color='blue.300' size="25px" ></Box>
             <DividerCustom  />
             <Text position="relative" left="-20px">brunowsignori@gmail.com</Text>
           </Flex>
 
-            <Text fontWeight="bold">Social media</Text>
+            <Text fontWeight="bold" marginTop="10px">Social media</Text>
             <Flex marginTop="12px">
                 <Link href="http://instagram.com" >
                 <Box as={FiInstagram} color='blue.300' size="20px" ></Box>

@@ -12,7 +12,7 @@ const variants = {
 };
 
 export const Navigation = () => (
-  <motion.ul className=" absolute z-50 pr-19 top-10 w-19 right-1  " variants={variants}>
+  <motion.ul className=" absolute z-55 pr-19 top-10 w-19 right-1" variants={variants}>
 
     {itemIds.map(i => (
       <MenuItem i={i} key={i} />

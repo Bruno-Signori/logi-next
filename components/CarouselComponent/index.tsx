@@ -7,7 +7,7 @@ import Link from 'next/link'
 class DemoCarousel extends Component {
     render() {
         return (
-          <div style={{width: '500px', height: "400px"}}>
+          <div style={{width: '200px', height: "200px"}}>
             <Carousel showThumbs={false}
 >
                 <div>
