@@ -91,11 +91,10 @@ export default function Home({recommendedProducts}: HomeProps) {
                     </Carousel>
                     </Flex>
                    <Flex align="center" color="blue.300" justify="center" marginTop="6px">
-                   <Link  href={`products/${recommendedProducts.uid}`}>
+                  
                      <text className="tracking-wider">
                        {PrismicDOM.RichText.asText(recommendedProducts.data.title)}
                        </text>
-                   </Link>
                    </Flex>
 
 
